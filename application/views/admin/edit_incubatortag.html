@@ -1,0 +1,75 @@
+{% extends 'admin/base.html' %}
+
+
+{% block title %}Edit Incubator{% endblock %}
+
+
+{% block css %}
+{% endblock %}
+
+
+{% block content %}
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        编辑孵化器地区
+        <small></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">孵化器</a></li>
+        <li class="active">地区</li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <!-- right column -->
+        <div class="col-md-12">
+            <!-- general form elements disabled -->
+            <div class="box box-warning">
+                <div class="box-header with-border">
+                    <h3 class="box-title"></h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <form role="form" action="edittag" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="id" value="{{ data.items.id }}">
+                        <input type="hidden" name="oldsort" value="{{ data.items.sort }}">
+
+                        <!-- text input -->
+                        <div class="form-group">
+                            <label>孵化器地区</label>
+                            <input type="text" name="type" class="form-control" value="{{ data.items.name }}" placeholder="Enter ...">
+                        </div>
+                        <div class="form-group">
+                            <label>权值</label>
+                            <input type="number" name="sort" class="form-control" value="{{ data.items.sort }}" placeholder="输入数字 ...">
+                        </div>
+                        <div class="box-footer">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        </div>
+
+                    </form>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!--/.col (right) -->
+    </div>
+    <!-- /.row -->
+</section>
+<!-- /.content -->
+{% endblock %}
+
+
+{% block script %}
+<!-- FastClick -->
+<script src="../../static/plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../static/admin/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../static/admin/js/demo.js"></script>
+{% endblock %}

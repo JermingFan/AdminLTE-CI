@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+
+.list_box { width:960px; margin:auto; overflow:hidden;}
+.list_box ul { width:960px;}
+.list_box ul li { width:240px; height:300px; margin-top:10px; position:relative; float:left; }
+.list_pic { width:228px; height:150px; position:absolute; top:0px; left:0px;}
+.list_titlein { width:228px; height:30px; line-height:30px; position:absolute; top:155px; left:0px; color:#544133; font-size:17px;}
+.list_titlein a { color:#544133;}
+.list_titlein a:hover { color:#96431d;}
+.list_desp { width:228px; height:72px; line-height:24px; color:#a7a7a7; position:absolute; top:185px; left:0px;}
+.list_tbar { width:228px; height:30px; background:url(../images/list_02.jpg) no-repeat; position:absolute; top:258px; left:0px;}
+.list_tbar dd { width:50px; float:left; line-height:32px; font-size:12px; color:#cbcbcb; margin-left:14px;}
+
+

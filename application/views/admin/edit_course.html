@@ -1,0 +1,85 @@
+{% extends 'admin/base.html' %}
+
+
+{% block title %}Add Course{% endblock %}
+
+
+{% block css %}
+{% endblock %}
+
+
+{% block content %}
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        编辑课程
+        <small></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">课程</a></li>
+        <li class="active">编辑</li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <!-- right column -->
+        <div class="col-md-12">
+            <!-- general form elements disabled -->
+            <div class="box box-warning">
+                <div class="box-header with-border">
+                    <h3 class="box-title"></h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <form role="form" action="edit" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="id" value="{{ data.id }}">
+                        <!-- text input -->
+                        <div class="form-group">
+                            <label>标题</label>
+                            <input type="text" name="name" class="form-control" value="{{ data.name }}" placeholder="Enter ...">
+                        </div>
+
+                        <div class="form-group">
+                            <label>图标</label>
+                            <img src="{{ data.img }}" height="100px" />
+                            <input type="file" name="img" class="form-control" id="exampleInputFile">
+                        </div>
+                        <!-- textarea -->
+                        <div class="form-group">
+                            <label>描述</label>
+                            <textarea name="desc" class="form-control" rows="5" placeholder="Enter ...">{{ data.desc }}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>创建时间</label>
+                            <input type="text" class="form-control" value="{{ data.created | date('Y-m-d H:i:s') }}" disabled>
+                        </div>
+
+                        <div class="box-footer">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        </div>
+
+                    </form>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!--/.col (right) -->
+    </div>
+    <!-- /.row -->
+</section>
+<!-- /.content -->
+{% endblock %}
+
+
+{% block script %}
+<!-- FastClick -->
+<script src="../../static/plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../static/admin/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../static/admin/js/demo.js"></script>
+{% endblock %}
